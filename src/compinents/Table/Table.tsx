@@ -23,7 +23,7 @@ const tableStyles = {
     }
 }
 export const Table = (props: TableOrdersType) => {
-
+    console.log()
     const orders = props.orders.length ? (
         props.orders.map(o => {
                 return <div key={s.id} className={s.item}>
