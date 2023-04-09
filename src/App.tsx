@@ -1,6 +1,7 @@
 import React from "react";
 import {useState, useEffect} from 'react';
 import {Table} from "./compinents/Table/Table";
+import {ImgSlider} from "./compinents/Slider/Slider";
 
 export type OrderType = {
     id: number
@@ -20,8 +21,8 @@ function App() {
             .then(res => res.json())
             .then((data: any) => {
                 setLoading(false)
-            setOrders(data.orders)
-    })
+                setOrders(data.orders)
+            })
     }, []);
 
 
@@ -30,10 +31,20 @@ function App() {
 
     return (
         <div className="App">
-            <Table orders={[]} title={"Getting ready"} status={"not_ready"} isLoading={loading}/>
-            <Table orders={readyOrders} title={"Ready"} status={"ready"} isLoading={loading}/>
+            <Table orders={gettingReadyOrders}
+                   title={"Getting ready"}
+                   status={"not_ready"}
+                   isLoading={loading}/>
+
+            <Table orders={readyOrders}
+                   title={"Ready"}
+                   status={"ready"}
+                   isLoading={loading}/>
+            <ImgSlider/>
         </div>
+
     )
 }
+
 
 export default App

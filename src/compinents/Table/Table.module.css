@@ -1,6 +1,7 @@
 .table{
     width: 430px;
-    min-height:300px;
+    min-height:150px;
+    max-height: 300px;
     border-collapse: collapse;
     border-spacing: 0;
     border: 1px solid #e0dad9;
@@ -12,8 +13,9 @@
 
 .grid{
     width: 400px;
-    min-height:300px;
-    overflow-x: auto;
+    min-height:150px;
+    max-height: 300px;
+    overflow-y: auto;
     border: 1px solid orange;
     padding: 16px;
     display: grid;

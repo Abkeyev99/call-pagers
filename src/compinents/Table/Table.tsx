@@ -4,8 +4,6 @@ import {OrderType} from "../../App";
 import Lottie from "lottie-react";
 import loading from "../../assets/animation/loating.json"
 import notFound from "../../assets/animation/not-found.json"
-import {Simulate} from "react-dom/test-utils";
-import load = Simulate.load;
 
 type TableOrdersType = {
     orders: OrderType[];
